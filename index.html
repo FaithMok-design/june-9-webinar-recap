@@ -91,25 +91,37 @@
       gap: 24px;
       flex-wrap: wrap;
     }
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--navy);
-      text-decoration: none;
+    .nav-cobranding {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
     }
-    .nav-logo span { color: var(--teal); }
-    .nav-tag {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      background: var(--cream-dark);
-      padding: 3px 10px;
-      border-radius: 100px;
-      margin-left: 10px;
-      vertical-align: middle;
+    .nav-cobrand-sep {
+      width: 1px;
+      height: 22px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+    .nav-logo-sprint {
+      height: 30px;
+      width: auto;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+    /* MTM canvas is 1200×1200; mark runs y=404–646 (33.7% top space, 20.2% content).
+       Clip to 32px window, scale image to 150px, offset -50px to hit the mark. */
+    .nav-logo-mtm {
+      height: 32px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .nav-logo-mtm img {
+      height: 150px;
+      width: auto;
+      display: block;
+      margin-top: -50px;
+      mix-blend-mode: multiply;
     }
     .nav-links {
       display: flex;
@@ -171,50 +183,6 @@
     }
     .btn-secondary:hover { border-color: var(--teal); color: var(--teal); }
 
-    /* ── Co-brand strip ── */
-    .cobrand-strip {
-      background: var(--cream);
-      border-bottom: 1px solid var(--border-light);
-      padding: 10px 0;
-    }
-    .cobrand-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
-    }
-    .cobrand-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      white-space: nowrap;
-    }
-    .cobrand-logo-sprint img {
-      height: 44px;
-      width: auto;
-      display: block;
-      mix-blend-mode: multiply;
-    }
-    /* MTM logo canvas is 1200×1200 with 34% top whitespace and 46% bottom.
-       Clip to show only the mark at the equivalent visual height as Sprint. */
-    .cobrand-logo-mtm {
-      height: 50px;
-      overflow: hidden;
-      display: block;
-    }
-    .cobrand-logo-mtm img {
-      height: 220px;
-      width: auto;
-      display: block;
-      margin-top: -72px;
-      mix-blend-mode: multiply;
-    }
 
     /* ── Hero ── */
     .hero {
@@ -593,7 +561,6 @@
     }
     @media (max-width: 600px) {
       .themes-grid { grid-template-columns: 1fr; }
-      .cobrand-inner { gap: 14px; }
     }
   </style>
 </head>
@@ -602,7 +569,13 @@
 <!-- ── Nav ── -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">Meet the <span>Moment</span><span class="nav-tag">Webinar Recap</span></a>
+    <div class="nav-cobranding">
+      <img class="nav-logo-sprint" src="assets/logos/ai-for-nonprofits-sprint.png" alt="AI for Nonprofits Sprint">
+      <span class="nav-cobrand-sep"></span>
+      <div class="nav-logo-mtm">
+        <img src="assets/logos/meet-the-moment-together.png" alt="Meet the Moment Together">
+      </div>
+    </div>
     <div class="nav-links">
       <a href="#recording">Recording</a>
       <a href="#themes">Key Themes</a>
@@ -612,19 +585,6 @@
     </div>
   </div>
 </nav>
-
-<!-- ── Co-brand strip ── -->
-<div class="cobrand-strip">
-  <div class="cobrand-inner">
-    <div class="cobrand-logo-sprint">
-      <img src="assets/logos/ai-for-nonprofits-sprint.png" alt="AI for Nonprofits Sprint">
-    </div>
-    <span class="cobrand-label">In partnership with</span>
-    <div class="cobrand-logo-mtm">
-      <img src="assets/logos/meet-the-moment-together.png" alt="Meet the Moment Together">
-    </div>
-  </div>
-</div>
 
 <!-- ── Hero ── -->
 <section class="hero">
