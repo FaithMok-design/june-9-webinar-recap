@@ -175,7 +175,7 @@
     .cobrand-strip {
       background: var(--cream);
       border-bottom: 1px solid var(--border-light);
-      padding: 12px 0;
+      padding: 10px 0;
     }
     .cobrand-inner {
       max-width: 1140px;
@@ -184,7 +184,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 28px;
       flex-wrap: wrap;
     }
     .cobrand-label {
@@ -193,14 +193,16 @@
       letter-spacing: .13em;
       text-transform: uppercase;
       color: var(--text-secondary);
+      white-space: nowrap;
     }
-    .cobrand-divider {
-      width: 1px;
-      height: 28px;
-      background: var(--border);
+    .cobrand-logo-sprint img {
+      height: 38px;
+      width: auto;
+      display: block;
+      mix-blend-mode: multiply;
     }
-    .cobrand-logo img {
-      height: 34px;
+    .cobrand-logo-mtm img {
+      height: 72px;
       width: auto;
       display: block;
       mix-blend-mode: multiply;
@@ -580,7 +582,6 @@
       section.content { padding: 56px 0; }
       section.content h2 { font-size: 1.7rem; }
       .nav-links a:not(.nav-cta) { display: none; }
-      .cobrand-divider { display: none; }
     }
     @media (max-width: 600px) {
       .themes-grid { grid-template-columns: 1fr; }
@@ -607,12 +608,11 @@
 <!-- ── Co-brand strip ── -->
 <div class="cobrand-strip">
   <div class="cobrand-inner">
-    <div class="cobrand-logo">
+    <div class="cobrand-logo-sprint">
       <img src="assets/logos/ai-for-nonprofits-sprint.png" alt="AI for Nonprofits Sprint">
     </div>
     <span class="cobrand-label">In partnership with</span>
-    <div class="cobrand-divider"></div>
-    <div class="cobrand-logo">
+    <div class="cobrand-logo-mtm">
       <img src="assets/logos/meet-the-moment-together.png" alt="Meet the Moment Together">
     </div>
   </div>
@@ -740,8 +740,8 @@
         <div class="quote-attr">An attendee + Joshua Peskay — after the NotebookLM Studio demo</div>
       </div>
       <div class="quote-card reveal reveal-delay-2">
-        <blockquote>We do not want anyone to be prevented from attending our accelerators due to cost. If you want to attend and affordability is the only thing stopping you — please reach out.</blockquote>
-        <div class="quote-attr">Joshua Peskay · Meet the Moment</div>
+        <blockquote>Remember when you couldn't even get AI to spell anything correctly? I mean, it has come a long way.</blockquote>
+        <div class="quote-attr">Kim Snyder · Meet the Moment</div>
       </div>
     </div>
   </div>
@@ -794,7 +794,7 @@
       <div class="pulse-item">
         <div class="pulse-emoji">🗺️</div>
         <div class="pulse-text">
-          <strong>"How did you build the mind map???"</strong> — An attendee (three question marks). Joshua's extremely complicated answer: "She clicked Mind Map in the Studio." One click. Kim confirmed. The room was delighted.
+          <strong>"How did you build the mind map???"</strong> — An attendee. Joshua's extremely complicated answer: "She clicked Mind Map in the Studio." One click. Kim confirmed. The room was delighted.
         </div>
       </div>
       <div class="pulse-item">
