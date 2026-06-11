@@ -196,15 +196,23 @@
       white-space: nowrap;
     }
     .cobrand-logo-sprint img {
-      height: 38px;
+      height: 44px;
       width: auto;
       display: block;
       mix-blend-mode: multiply;
     }
+    /* MTM logo canvas is 1200×1200 with 34% top whitespace and 46% bottom.
+       Clip to show only the mark at the equivalent visual height as Sprint. */
+    .cobrand-logo-mtm {
+      height: 50px;
+      overflow: hidden;
+      display: block;
+    }
     .cobrand-logo-mtm img {
-      height: 72px;
+      height: 220px;
       width: auto;
       display: block;
+      margin-top: -72px;
       mix-blend-mode: multiply;
     }
 
